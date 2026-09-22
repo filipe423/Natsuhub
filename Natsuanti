@@ -21,7 +21,7 @@ if previous then
 end
 
 local SCRIPT_KEY = "NATSUONTOP"
-local IMAGE_ID = "rbxassetid://81245576355054"
+
 
 local UltraTP = false
 local RouteRunning = false
