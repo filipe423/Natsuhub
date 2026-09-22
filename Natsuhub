@@ -14109,22 +14109,22 @@ do
 		nIconCorner.CornerRadius = UDim.new(0, 10)
 		nIconCorner.Parent = nIcon
 		local function makeStroke(parentObj, rotation, offset, length)
-			local bar = Instance.new("Frame")
-			bar.AnchorPoint = Vector2.new(0.5, 0.5)
-			bar.Position = UDim2.fromOffset(offset.X, offset.Y)
-			bar.Size = UDim2.fromOffset(length or 3, 18)
-			bar.Rotation = rotation
-			bar.BackgroundColor3 = COLORS.accent
-			bar.BorderSizePixel = 0
-			bar.Parent = parentObj
-			local c = Instance.new("UICorner")
-			c.CornerRadius = UDim.new(1, 0)
-			c.Parent = bar
-			return bar
-		end
-		makeStroke(nIcon, 0, { 10, 18 })
-		makeStroke(nIcon, - 22, { 18, 18 })
-		makeStroke(nIcon, 22, { 26, 18 })
+	local bar = Instance.new("Frame")
+	bar.AnchorPoint = Vector2.new(0.5, 0.5)
+	bar.Position = UDim2.fromOffset(offset[1] or 0, offset[2] or 0)
+	bar.Size = UDim2.fromOffset(length or 3, 18)
+	bar.Rotation = rotation
+	bar.BackgroundColor3 = COLORS.accent
+	bar.BorderSizePixel = 0
+	bar.Parent = parentObj
+	local c = Instance.new("UICorner")
+	c.CornerRadius = UDim.new(1, 0)
+	c.Parent = bar
+	return bar
+end
+makeStroke(nIcon, 0, { 10, 18 })
+makeStroke(nIcon, - 22, { 18, 18 })
+makeStroke(nIcon, 22, { 26, 18 })
 		local title = Instance.new("TextLabel")
 		title.Size = UDim2.new(1, -100, 0, 26)
 		title.Position = UDim2.fromOffset(0, 25)
